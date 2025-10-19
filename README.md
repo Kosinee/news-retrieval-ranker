@@ -16,44 +16,7 @@
 Увеличить **CTR (Click-Through Rate)** и **вовлечённость пользователей**  
 за счёт более релевантной выдачи новостей на главной странице.  
 Цель:
-- +10-15 % CTR uplift относительно baseline (BM25),
-- уменьшить неинтересные рекомендации в top-5.
-
----
-
-## 🏗️ Архитектура пайплайна
-
-           ┌──────────────────────┐
-           │  User Query / Context│
-           └──────────┬───────────┘
-                      │
-    ┌─────────────────▼─────────────────┐
-    │          Candidate Generation     │
-    │───────────────────────────────────│
-    │  • BM25 (keyword retriever)       │
-    │  • DSSM_sem (semantic bi-encoder) │
-    │  • DSSM_pref (behavioral bi-encoder)│
-    └───────────────┬───────────────────┘
-                    │
-    ┌───────────────▼───────────────────┐
-    │          Ranking Layer (LTR)      │
-    │───────────────────────────────────│
-    │  LightGBM LambdaMART Ranker       │
-    │  Фичи:                            │
-    │   – скоры retrievers              │
-    │   – поведенческие (CTR_doc, freq) │
-    │   – категориальные / бизнес       │
-    │   – интеракционные                │
-    └───────────────┬───────────────────┘
-                    │
-    ┌───────────────▼───────────────────┐
-    │        Continuous Training Loop   │
-    │───────────────────────────────────│
-    │  1. сбор новых логов              │
-    │  2. подготовка данных             │
-    │  3. переобучение retrievers/LTR   │
-    │  4. деплой обновлённых моделей    │
-    └───────────────────────────────────┘
+- +10-15 % CTR uplift относительно baseline (BM25)
 
 ---
 
@@ -62,22 +25,21 @@
 ### 1️⃣ Candidate Generators
 | Модель | Тип | Цель | Лосс | Основные метрики |
 |--------|------|------|------|------------------|
-| **BM25** | Keyword | базовый baseline | — | Recall@100 |
-| **DSSM_sem** | Bi-encoder | семантическая близость | `InfoNCE` | Recall@K, MRR |
-| **DSSM_pref** | Bi-encoder | предпочтения по кликам | `TripletLoss` | Recall@K, NDCG@K |
+| **BM25** | Keyword | полнотекстовая близость | — | Recall@K |
+| **DSSM_sem** | Bi-encoder | семантическая близость | `InfoNCE` | Recall@K |
+| **DSSM_pref** | Bi-encoder | предпочтения по кликам | `TripletLoss` | Recall@K |
 
 ---
 
 ### 2️⃣ Reranker / Ranker
 | Модель | Тип | Лосс | Оптимизирует | Метрики |
 |--------|------|------|---------------|----------|
-| **LightGBM LambdaMART** | Listwise Ranker | `LambdaMART Loss` (взвешенный pairwise-логистический) | NDCG | NDCG@10, MRR |
+| **LightGBM LambdaMART** | Listwise Ranker | `LambdaMART Loss` | NDCG | NDCG@10, MRR, MAP |
 
 **Основные признаки:**
 - скоры от BM25, DSSM_sem, DSSM_pref;  
 - CTR и статистика документов (поведенческие фичи);  
 - категории / источники (категориальные);  
-- интеракции: `(query_category == doc_category)`, `(score_sem × score_pref)` и др.
 
 ---
 

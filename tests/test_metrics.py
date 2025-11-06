@@ -22,13 +22,10 @@ def test_ir_metrics_basic():
 def test_evaluate_mapping(monkeypatch):
     from src.training import evaluate_retriever as er
     import numpy as np
-
-    # подменим faiss поиск и encode, чтобы не тянуть реальные модели
     def fake_encode_texts(model_dir, texts, batch_size=256):
         return np.random.randn(len(texts), 8).astype("float32")
 
     def fake_faiss_search(index, query_vecs, topk=10):
-        # вернем индексы [0,1,2...]
         I = np.tile(np.arange(topk), (len(query_vecs), 1))
         return I.tolist()
 

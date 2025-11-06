@@ -5,7 +5,6 @@ from src.training.evaluate_retriever import faiss_search
 
 @pytest.fixture
 def fake_index():
-    """Создаёт маленький FAISS индекс с 5 документами (размер вектора 8)."""
     dim = 8
     index = faiss.IndexFlatIP(dim)
     vecs = np.random.randn(5, dim).astype("float32")
@@ -15,7 +14,6 @@ def fake_index():
 
 @pytest.fixture
 def fake_queries():
-    """Создаёт 2 запроса в том же пространстве."""
     q = np.random.randn(2, 8).astype("float32")
     faiss.normalize_L2(q)
     return q

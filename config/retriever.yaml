@@ -1,0 +1,16 @@
+random_seed: 42
+
+dataset:
+  name: fiqa
+  path: static/data/fiqa
+
+model:
+  name: sentence-transformers/all-MiniLM-L6-v2
+  path: static/artifacts/retriever_fiqa
+
+train:
+  batch_size: 64
+  epochs: 1
+  lr: 2e-5
+  max_seq_length: 128
+  metrics_path: static/metrics

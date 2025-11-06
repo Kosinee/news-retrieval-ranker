@@ -5,220 +5,79 @@ tags:
 - sentence-similarity
 - feature-extraction
 - generated_from_trainer
-- dataset_size:14131
+- dataset_size:8
 - loss:MultipleNegativesRankingLoss
 base_model: sentence-transformers/all-MiniLM-L6-v2
 widget:
-- source_sentence: Option Trading / Demo Account
+- source_sentence: Business Expense - Car Insurance Deductible For Accident That Occurred
+    During a Business Trip
   sentences:
-  - If the company went bankrupt, the issued public shares that were outstanding at
-    the time most likely were voided, in which case your shares are most definitely
-    gone.  The company might have done a new stock issuance coming out of bankruptcy
-    with a different symbol, and while it could be substantially the same company,
-    it doesn't mean much for you.  It's unfortunate this may be the case, but it is
-    one of the risks of investing.
-  - '"In real life, you''d see spreads like AMZN 04/13/2017 910.00 C 4.90 +1.67 Bid:
-    4.75 Ask: 5.20 (with AMZN @ $897 right now) and the fill you''d get on the buy
-    side would be closer to the ask. i.e. I''d offer $5.00 and hope that it filled.  Filling
-    a $4 bid when ask is $8 isn''t likely unless the stock blipped down enough for
-    your price to fill.  Options are a lot like day trading, in most cases. Most members
-    here will agree that day trading isn''t investing, it''s gambling. Long term,
-    the S&P has been up 10%/yr. But any given day, the noise of the market is a 50/50
-    zero sum game. Most long term stock ''investors'' do well. Those who get in and
-    out, not so much.  There are aspects to options that are appealing. As you''ve
-    seen, the return can be high, even IRL, but your loss can be 100% as well. Let
-    me share with you a blurred line - I wrote ""Betting on Apple at 9 to 2"" in which
-    I described an option strategy that ran 2 years and would return $10,000 on a
-    $2200 bet. A similar bet that ended a year ago yielded a 100% loss. I don''t post
-    there very often, as I keep that trading to a minimum.  There are warnings for
-    those who want to start trading options -"'
-  - '"It is called ""Credit card installments"" or ""Equal pay installments"", and
-    I am not aware of them being widely used in the USA. While in other countries
-    they are supported by banks directly (right?), in US you may find this option
-    only in some big stores like home improvement stores, car dealerships, cell phone
-    operators (so that you can buy a new phone) etc. Some stores allow 0% financing
-    for, say, 12 months which is not exactly the same as installments but close, if
-    you have discipline to pay $250 each month and not wait for 12 months to end.
-    Splitting the big payment in parts means that the seller gets money in parts as
-    well, and it adds risks of customer default, introduces debt collection possibility
-    etc. That''s why it''s usually up to the merchants to support it - bank does not
-    care in this case, from the bank point of view the store just charges the same
-    card another $250 every month. In other countries banks support this option directly,
-    I think, taking over or dividing the risk with the merchants. This has not happened
-    in US. There is a company SplitIt which automates installments if stores want
-    to support it but again, it means stores need to agree to it. Here is a simple
-    article describing how credit cards work: https://www.usbank.com/credit-cards/how-credit-cards-work.html
-    In general, if you move to US, you are unlikely to be able to get a regular credit
-    card because you will not have any ""credit history"" which is a system designed
-    to track each customer ability to get & pay off debt. The easiest way to build
-    the history - request ""secured credit card"", which means you have to give the
-    bank money up front and then they will give you a credit card with a credit limit
-    equal to that amount. It''s like a ""practice credit card"". You use it for 6-12
-    months and the bank will report your usage to credit bureaus, establishing your
-    ""credit score"". After that you should be able to get your money back and convert
-    your secured card into a regular credit card. Credit history can be also built
-    by paying rent and utilities but that requires companies who collect money to
-    report the payments to credit bureaus and very few do that. As anything else in
-    US, there are some businesses which help to solve this problem for extra money."'
-- source_sentence: Investment for beginners in the United Kingdom
-  sentences:
-  - 'After doing this many times, my preferred method is: The reason being that the
-    US banks will use every chance possible to take your money in fees. Usually the
-    German bank website will tell you what the current exchange rate. You were correct
-    in selecting Transfer in $ and got the exchange rate. In my experience if you
-    transfer in Euros, the US bank at the other end, will take about 3-5%, because
-    they can. Selecting OUR means that you only have the fee taken out by the Source
-    bank. By doing shared, it looks like both banks took their full fee. If you chose
-    OUR, I''m fairly certain you just would have paid the 1.50 and the 20. Chase would
-    not have taken the 15.'
-  - Before jumping into stock trading, do try Mutual Funds and Index funds, That should
-    give you some good overview of the equity markets. Further, do read up on building
-    a balanced portfolio to suit your need and risk apetite. This would help you decide
-    on Govt. bonds and other debt instruments.
-  - From a purely financial standpoint, you should invest using whatever dollars get
-    you the best rate. The general rule of thumb that I've come across is that if
-    you are making another person/company change your money into another nation's
-    currency, they will likely charge a higher exchange rate than you could get yourself.
-    However, it really depends on your situation, how easy it is for you to exchange
-    money, what your exchange rate is, and what your broker is charging you to exchange
-    to USD (if on the off chance this is truly nothing, then stick with CAD). Don't
-    worry about the strength of the USD to CAD too much because converting your money
-    before you make purchases doesn't allow you to buy more shares. For the vast majority
-    of people, trying to work with national currency exchange rates makes things unnecessarily
-    complex.
-- source_sentence: Is there any reason to buy shares before/after a split?
-  sentences:
-  - 'The nature of this question (finding a financial adviser) can make it a conundrum.
-    Those who have little financial experience are often in the greatest need of a
-    financial adviser and at the same time are the least qualified to select one.
-    I''m not putting you or anyone in particular in this category. And of course it''s
-    a sliding scale: In general the more capable you are of running your own finances
-    the more prepared you are to answer this question. With that said, I would recommend
-    backing up half a step. Consider advisers other than strictly fee-only advisers.
-    Perhaps you have already considered this decision. But perhaps others reading
-    this have not. My (Ameriprise) adviser charges a monthly (~$50) fee, but also
-    gets percentage-based portions of certain investments. Based on a $150/hr rate
-    that amounts to four hours per year. Does he spend four hours per year on my account?
-    Well so far he does (~2 yrs). But that is determined primarily by how much interaction
-    I choose to have with him. (I suppose I could spend more time asking him questions
-    and less time on this forum. :P) I have never fully understood the gravitation
-    towards fee-based advisers on principle. I guess the theory is they are not making
-    biased decisions about your investments because they don''t have as much of a
-    stake in how well your investments to do. I don''t necessarily see that as an
-    advantage. It seems they would have less of an incentive to ensure the growth
-    of your investments. Although if you''re nearing retirement then growth isn''t
-    your biggest concern. Perhaps a fee-based adviser makes more sense in that scenario.
-    Whatever pay structure your adviser uses, it would seem to make sense to consider
-    a successful adviser with a good client base. This implies that the adviser knows
-    what he/she is doing. (But it could also just be a sign that they are good at
-    marketing themselves.) If your adviser has a good base of wealthy clients then
-    choosing a strictly-fee based adviser would mitigate the risk of your adviser
-    having less incentive to consider your portfolio vs that of more wealthy clients.
-    To more directly answer your question I suggest asking several of your adviser
-    candidates for advice on choosing an adviser. I suspect you will get some good
-    advice as well as good insight on the integrity and honesty of the adviser.'
-  - 'There has been a lot of research on the effects of stock splits. Some studies
-    have concluded that: However note that (i) these are averages over large samples
-    and does not say it will work on every split and (ii) most of the research is
-    a bit dated and more recent papers have often struggled to find any significant
-    performance impact after 1990, possibly because the effect has been well documented
-    and the arbitrage no longer exists. This document summarises the existing research
-    on the subject although it seems to miss some of the more recent papers. More
-    practically, if you pay a commission per share, you will pay more commissions
-    after the split than before. Bottom line: don''t overthink it and focus on other
-    criteria to decide when/whether to invest.'
-  - 'Look into the asset allocations of lifecycle funds offered by a company like
-    Vanguard. This page allows you to select your current age and find a fund based
-    on that. You could pick a fund, like the Target Retirement 2055 Fund (ages 21-25),
-    and examine its allocation in the Portfolio & Management tab. For this fund, the
-    breakdown is: Then, look at the allocation of the underlying funds that comprise
-    the lifecycle fund, in the same tab.  Look at each of those funds and see what
-    asset allocation they use, and that should give you a rough idea for an age-based
-    allocation. For example, the Total Stock Market Index Fund page has a sector breakdown,
-    so if you wanted to get very fine-grained with your allocation, you could. (You''re
-    probably much better off investing in the index fund, low-cost ETFs, or the lifecycle
-    fund itself, however; it''ll be much cheaper).  Doing this for several lifecycle
-    funds should be a good start. Keep in mind, however, that these funds are rebalanced
-    as the target date approaches, so if you''re following the allocation of some
-    particular funds, you''ll have to rebalance as well. If you really want an age-based
-    allocation that you don''t have to think about, invest in a lifecycle fund directly.
-    You''ll probably pay a lower expense ratio than if you invested in a whole slew
-    of funds directory, and it''s less work for someone who isn''t comfortable managing
-    their portfolio themselves. Furthermore, with Vanguard, the expense ratios are
-    already fairly low.  This is only one example of an allocation, however; your
-    tolerance of risk, age, etc. may affect what allocation you''re willing to accept.  Full
-    disclosure: Part of my Roth IRA is invested in the Target 2055 fund I used as
-    an example above, and another part uses a similar rebalancing strategy to the
-    one I used above, but with Admiral Share funds, which have higher minimum investments
-    but lower expense ratios.'
-- source_sentence: What are the advantages of paying off a mortgage quickly?
-  sentences:
-  - 'While technically true, a card issuer can cancel your card for almost any reason
-    they want, it''s highly unlikely they''ll cancel it because you pay your bills!
-    There are many, many people out there that pay their bills in full every month
-    without ever paying a cent in credit card interest. I wouldn''t ever purposefully
-    incur any interest on a credit card. Related anecdote: I used to have a credit
-    card that I only used for gas purchases because they gave 5% off for fuel. The
-    issuer eventually discontinued the program (I assume because people like me took
-    advantage of it.) So while they didn''t cancel my card, the bonus eventually went
-    away. I miss that card. My conclusion: if you can take advantage of promotional
-    rates, by all means, go for it. You don''t owe them any favors. Enjoy it as long
-    as it lasts.'
-  - The reason is in your own question. The answer is simple. They use that code to
-    tax the product otherwise it would just be out of pocket expenses.
-  - 'From my experience and friends'' experiences, I can say that there are advantages
-    and disadvantages for paying off your mortgage quickly. Basically, it depends
-    on these factors: the type of the mortgage, its interest rate, your financial
-    stability, your skills in making investments and other outside factors, such as
-    inflation, liquidity, oppurtunity cost, etc. Paying it off means you save on interest
-    ratings, you decrease investment risks and your investment rates are taxable.
-    Disadvantages are that you cannot use this money for investing, you cannot use
-    this money for tax deductions and that in a state of inflation, not paying it
-    off in advance could save you a lot of money.  However, I always recommend to
-    read some more on websites that deal with mortgages, and speak with the mortgage
-    expert in your bank.Just acquire enough information to make a good assessment.
-    An interesting article on this topic - The Advantages and Disadvantages of Paying
-    Off Your Mortgage'
-- source_sentence: Can paying down a mortgage be considered an “investment”?
-  sentences:
-  - '"Your #1 problem is the Government both in it''s form as a taxation outfit and
-    as a ''law and order'' outfit.  You''d be very surprised at how fast a bank seizes
-    your bank account in response to a court order.  Purchase 100 Mexican 50 Peso
-    Gold (1.2 oz/ea).  These coins are cheap (lowest cost to get into) and will not
-    be reportable on sale to taxing authorities.  That money is out of the banking
-    system and legal system(s).  Do not store them in a bank! You need to find a tax
-    strategist, probably a former IRS agent / CPA type. With the rest remaining money...  There''s
-    an old saying, Don''t fight the Fed.  As well as ""The trend is your friend"".  So,
-    the Fed wants all savers fully invested right now (near 0 interest rates). When
-    investing, I find that if you do exactly opposite what you think is the smart
-    thing, that''s the best thing.  Therefore, it follows: 1) Don''t fight the Fed
-    2) Do opposite of smart 3) Do: Fight the Fed (and stay 100% out of the market
-    and in cash) We''re looking like Japan so could remain deflationary for decades
-    to come.  Cash is king..."'
-  - '"Another problem with this plan (assuming you get past Rocky''s answer somehow)
-    is that you assume that $50K in construction costs will translate to $50K in increased
-    value. That''s not always true; the ROI on home improvements is usually a lot
-    less than 100%. You''d also owe more property taxes on your improvements, which
-    would cut into your plan somewhat. But you also can''t keep doing this forever.
-    Soon enough, you''d run out of physical and/or legal space to keep adding additions
-    to the house (zoning tends to limit how much you can build, unless you''re in
-    the middle of nowhere, and eventually you''d fill the lot), even if you did manage
-    to keep obtaining more and more loans. And you''d quickly reach the point of diminishing
-    returns on your expansions. Many homebuyers might be prepared to pay more for
-    a third or fourth bedroom, but vanishingly few in most markets will pay substantially
-    more for a second billiards room or a third home theater. At some point, your
-    house isn''t a mansion, it''s ""that ridiculous castle"" only an eccentric would
-    want, and the pool of potential buyers (and the price they''ll pay for it) diminishes.  And
-    the lender, not being stupid, isn''t going to go on financing your creation of
-    a monstrosity, because they are the ones who will be stuck with the place if you
-    default."'
-  - If your mortgage interest is tax-deductible, it's generally a bad idea to pay
-    down the principal on the mortgage because you'd be losing the tax deduction.
-    You could instead invest it in a tax-free municipal bond fund, especially if you're
-    in a high tax bracket (including state and local marginal tax rates). For example,
-    if you have a 5% rate mortgage on your home, you could invest in a 3.5% municipal
-    bond and still come out ahead when you apply the tax deduction to your income
-    at a 44% (33% federal + 7% state + 4% city in NYC) marginal tax rate.
+  - 'The IRS Guidance pertaining to the subject.  In general the best I can say is
+    your business expense may be deductible.  But it depends on the circumstances
+    and what it is you want to deduct. Travel Taxpayers who travel away from home
+    on business may deduct related   expenses, including the cost of reaching their
+    destination, the cost   of lodging and meals and other ordinary and necessary
+    expenses.   Taxpayers are considered “traveling away from home” if their duties   require
+    them to be away from home substantially longer than an   ordinary day’s work and
+    they need to sleep or rest to meet the demands   of their work. The actual cost
+    of meals and incidental expenses may be   deducted or the taxpayer may use a standard
+    meal allowance and reduced   record keeping requirements. Regardless of the method
+    used, meal   deductions are generally limited to 50 percent as stated earlier.    Only
+    actual costs for lodging may be claimed as an expense and   receipts must be kept
+    for documentation. Expenses must be reasonable   and appropriate; deductions for
+    extravagant expenses are not   allowable. More information is available in Publication
+    463, Travel,   Entertainment, Gift, and Car Expenses. Entertainment Expenses for
+    entertaining clients, customers or employees may be   deducted if they are both
+    ordinary and necessary and meet one of the   following tests: Directly-related
+    test: The main purpose of the entertainment activity is the conduct of business,
+    business was actually conducted   during the activity and the taxpayer had more
+    than a general   expectation of getting income or some other specific business
+    benefit   at some future time.   Associated test: The entertainment was associated
+    with the active conduct of the taxpayer’s trade or business and occurred directly   before
+    or after a substantial business discussion. Publication 463 provides more extensive
+    explanation of these tests as   well as other limitations and requirements for
+    deducting entertainment   expenses. Gifts Taxpayers may deduct some or all of
+    the cost of gifts given in the   course of their trade or business. In general,
+    the deduction is   limited to $25 for gifts given directly or indirectly to any
+    one   person during the tax year. More discussion of the rules and   limitations
+    can be found in Publication 463. If your LLC reimburses you for expenses outside
+    of this guidance it should be treated as Income for tax purposes. Edit for Meal
+    Expenses: Amount of standard meal allowance.   The standard meal allowance is   the
+    federal M&IE rate. For travel in 2010, the rate for most small   localities in
+    the United States is $46 a day. Source IRS P463 Alternately you could reimburse
+    at a per diem rate'
+  - As a general rule, you must choose between a mileage deduction or an actual expenses
+    deduction.  The idea is that the mileage deduction is supposed to cover all costs
+    of using the car.  Exceptions include parking fees and tolls, which can be deducted
+    separately under either method.  You explicitly cannot deduct insurance costs
+    if you claim a mileage deduction.   Separately, you probably won't be able to
+    deduct the deductible for your car as a casualty loss.  You first subtract $100
+    from the deductible and then divide it by your Adjusted Gross Income (AGI) from
+    your tax return.  If your deductible is over 10% of your AGI, you can deduct it.   Note
+    that even with a $1500 deductible, you won't be able to deduct anything if you
+    made more than $14,000 for the year.  For most people, the insurance deductible
+    just isn't large enough relative to income to be tax deductible.   Source
+  - I don't believe Saturday is a business day either. When I deposit a check at a
+    bank's drive-in after 4pm Friday, the receipt tells me it will credit as if I
+    deposited on Monday.  If a business' computer doesn't adjust their billing to
+    have a weekday due date, they are supposed to accept the payment on the next business
+    day, else, as you discovered, a Sunday due date is really the prior Friday. In
+    which case they may be running afoul of the rules that require X number of days
+    from the time they mail a bill to the time it's due.  The flip side to all of
+    this, is to pick and choose your battles in life. Just pay the bill 2 days early.
+    The interest on a few hundred dollars is a few cents per week. You save that by
+    not using a stamp, just charge it on their site on the Friday. Keep in mind, you
+    can be right, but their computer still dings you. So you call and spend your valuable
+    time when ever the due date is over a weekend, getting an agent to reverse the
+    late fee. The cost of 'right' is wasting ten minutes, which is worth far more
+    than just avoiding the issue altogether.  But - if you are in the US (you didn't
+    give your country), we have regulations for everything. HR 627, aka The CARD act
+    of 2009, offers - ‘‘(2) WEEKEND OR HOLIDAY DUE DATES.—If the payment due date
+    for a   credit card account under an open end consumer credit plan is a day on   which
+    the creditor does not receive or accept payments by mail   (including weekends
+    and holidays), the creditor may not treat a   payment received on the next business
+    day as late for any purpose.’’. So, if you really want to pursue this, you have
+    the power of our illustrious congress on your side.
 datasets: []
 pipeline_tag: sentence-similarity
 library_name: sentence-transformers
@@ -274,9 +133,9 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer("sentence_transformers_model_id")
 # Run inference
 sentences = [
-    'Can paying down a mortgage be considered an “investment”?',
-    "If your mortgage interest is tax-deductible, it's generally a bad idea to pay down the principal on the mortgage because you'd be losing the tax deduction. You could instead invest it in a tax-free municipal bond fund, especially if you're in a high tax bracket (including state and local marginal tax rates). For example, if you have a 5% rate mortgage on your home, you could invest in a 3.5% municipal bond and still come out ahead when you apply the tax deduction to your income at a 44% (33% federal + 7% state + 4% city in NYC) marginal tax rate.",
-    '"Another problem with this plan (assuming you get past Rocky\'s answer somehow) is that you assume that $50K in construction costs will translate to $50K in increased value. That\'s not always true; the ROI on home improvements is usually a lot less than 100%. You\'d also owe more property taxes on your improvements, which would cut into your plan somewhat. But you also can\'t keep doing this forever. Soon enough, you\'d run out of physical and/or legal space to keep adding additions to the house (zoning tends to limit how much you can build, unless you\'re in the middle of nowhere, and eventually you\'d fill the lot), even if you did manage to keep obtaining more and more loans. And you\'d quickly reach the point of diminishing returns on your expansions. Many homebuyers might be prepared to pay more for a third or fourth bedroom, but vanishingly few in most markets will pay substantially more for a second billiards room or a third home theater. At some point, your house isn\'t a mansion, it\'s ""that ridiculous castle"" only an eccentric would want, and the pool of potential buyers (and the price they\'ll pay for it) diminishes.  And the lender, not being stupid, isn\'t going to go on financing your creation of a monstrosity, because they are the ones who will be stuck with the place if you default."',
+    'Business Expense - Car Insurance Deductible For Accident That Occurred During a Business Trip',
+    "As a general rule, you must choose between a mileage deduction or an actual expenses deduction.  The idea is that the mileage deduction is supposed to cover all costs of using the car.  Exceptions include parking fees and tolls, which can be deducted separately under either method.  You explicitly cannot deduct insurance costs if you claim a mileage deduction.   Separately, you probably won't be able to deduct the deductible for your car as a casualty loss.  You first subtract $100 from the deductible and then divide it by your Adjusted Gross Income (AGI) from your tax return.  If your deductible is over 10% of your AGI, you can deduct it.   Note that even with a $1500 deductible, you won't be able to deduct anything if you made more than $14,000 for the year.  For most people, the insurance deductible just isn't large enough relative to income to be tax deductible.   Source",
+    "I don't believe Saturday is a business day either. When I deposit a check at a bank's drive-in after 4pm Friday, the receipt tells me it will credit as if I deposited on Monday.  If a business' computer doesn't adjust their billing to have a weekday due date, they are supposed to accept the payment on the next business day, else, as you discovered, a Sunday due date is really the prior Friday. In which case they may be running afoul of the rules that require X number of days from the time they mail a bill to the time it's due.  The flip side to all of this, is to pick and choose your battles in life. Just pay the bill 2 days early. The interest on a few hundred dollars is a few cents per week. You save that by not using a stamp, just charge it on their site on the Friday. Keep in mind, you can be right, but their computer still dings you. So you call and spend your valuable time when ever the due date is over a weekend, getting an agent to reverse the late fee. The cost of 'right' is wasting ten minutes, which is worth far more than just avoiding the issue altogether.  But - if you are in the US (you didn't give your country), we have regulations for everything. HR 627, aka The CARD act of 2009, offers - ‘‘(2) WEEKEND OR HOLIDAY DUE DATES.—If the payment due date for a   credit card account under an open end consumer credit plan is a day on   which the creditor does not receive or accept payments by mail   (including weekends and holidays), the creditor may not treat a   payment received on the next business day as late for any purpose.’’. So, if you really want to pursue this, you have the power of our illustrious congress on your side.",
 ]
 embeddings = model.encode(sentences)
 print(embeddings.shape)
@@ -331,19 +190,19 @@ You can finetune this model on your own dataset.
 #### Unnamed Dataset
 
 
-* Size: 14,131 training samples
+* Size: 8 training samples
 * Columns: <code>sentence_0</code> and <code>sentence_1</code>
 * Approximate statistics based on the first 1000 samples:
-  |         | sentence_0                                                                        | sentence_1                                                                          |
-  |:--------|:----------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
-  | type    | string                                                                            | string                                                                              |
-  | details | <ul><li>min: 4 tokens</li><li>mean: 15.55 tokens</li><li>max: 40 tokens</li></ul> | <ul><li>min: 8 tokens</li><li>mean: 111.68 tokens</li><li>max: 128 tokens</li></ul> |
+  |         | sentence_0                                                                       | sentence_1                                                                           |
+  |:--------|:---------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|
+  | type    | string                                                                           | string                                                                               |
+  | details | <ul><li>min: 6 tokens</li><li>mean: 12.5 tokens</li><li>max: 19 tokens</li></ul> | <ul><li>min: 13 tokens</li><li>mean: 113.62 tokens</li><li>max: 128 tokens</li></ul> |
 * Samples:
-  | sentence_0                                                                                                             | sentence_1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-  |:-----------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-  | <code>Stock trading after a crash</code>                                                                               | <code>"There are two things going on here, neither of which favors this approach. First, as @JohnFx noted, you should be wary of the sunk-cost fallacy, or throwing good money after bad. You already lost the money you lost, and there's no point in trying to ""win it back"" as opposed to just investing the money you still have as wisely as possible, forgetting your former fortune. Furthermore, the specific strategy you suggest is not a good one. The problem is that you're assuming that, whenever the stock hits $2, it will eventually rebound to $3. While that may often happen, it's far from guaranteed. More specifically, assuming the efficient market hypothesis applies (which it almost certainly does), there are theorems that say you can't increase your expected earning with a strategy like the one you propose: the apparent stability of the steady stream of income is offset by the chance that you lose out if the stock does something you didn't anticipate."</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-  | <code>Previous owner of my home wants to buy it back but the property's value is less than my loan… what to do?</code> | <code>It's a short sale. See these for good overviews: http://www.realtor.org/library/library/fg335 http://homebuying.about.com/od/4closureshortsales/a/shortsalebasics.htm  You'll want input from your lawyer and accountant (assuming the lender says they would accept such a sale). Best of luck - sounds like this could be a great opportunity for you if it all comes together. DO NOT talk to a realtor.</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-  | <code>Is there a general guideline for what percentage of a portfolio should be in gold?</code>                        | <code>I think most financial planners or advisors would allocate zero to a gold-only fund. That's probably the mainstream view. Metals investments have a lot of issues, more elaboration here: What would be the signs of a bubble in silver? Also consider that metals (and commodities, despite a recent drop) are on a big run-up and lots of random people are saying they're the thing to get in on. Usually this is a sign that you might want to wait a bit or at least buy gradually.  The more mainstream way to go might be a commodities fund or all-asset fund. Some funds you could look at (just examples, not recommendations) might include several PIMCO funds including their commodity real return and all-asset; Hussman Strategic Total Return; diversified commodities index ETFs; stuff like that has a lot of the theoretical benefits of gold but isn't as dependent on gold specifically. Another idea for you might be international bonds (or stocks), if you feel US currency in particular is at risk. Oh, and REITs often come up as an inflation-resistant asset class. I personally use diversified funds rather than gold specifically, fwiw, mostly for the same reason I'd buy a fund instead of individual stocks. 10%-ish is probably about right to put into this kind of stuff, depending on your overall portfolio and goals. Pure commodities should probably be less than funds with some bonds, stocks, or REITs, because in principle commodities only track inflation over time, they don't make money. The only way you make money on them is rebalancing out of them some when there's a run up and back in when they're down. So a portfolio with mostly commodities would suck long term. Some people feel gold's virtue is tangibility rather than being a piece of paper, in an apocalypse-ish scenario, but if making that argument I think you need physical gold in your basement, not an ETF.  Plus I'd argue for guns, ammo, and food over gold in that scenario. :-)</code> |
+  | sentence_0                                                                                                 | sentence_1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+  |:-----------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | <code>Business Expense - Car Insurance Deductible For Accident That Occurred During a Business Trip</code> | <code>As a general rule, you must choose between a mileage deduction or an actual expenses deduction.  The idea is that the mileage deduction is supposed to cover all costs of using the car.  Exceptions include parking fees and tolls, which can be deducted separately under either method.  You explicitly cannot deduct insurance costs if you claim a mileage deduction.   Separately, you probably won't be able to deduct the deductible for your car as a casualty loss.  You first subtract $100 from the deductible and then divide it by your Adjusted Gross Income (AGI) from your tax return.  If your deductible is over 10% of your AGI, you can deduct it.   Note that even with a $1500 deductible, you won't be able to deduct anything if you made more than $14,000 for the year.  For most people, the insurance deductible just isn't large enough relative to income to be tax deductible.   Source</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+  | <code>Hobby vs. Business</code>                                                                            | <code>Miscellaneous income -- same category used for hobbies.</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+  | <code>“Business day” and “due date” for bills</code>                                                       | <code>You definitely have an argument for getting them to reverse the late fee, especially if it hasn't happened very often. (If you are late every month they may be less likely to forgive.) As for why this happens, it's not actually about business days, but instead it's based on when they know that you paid. In general, there are 2 ways for a company to mark a bill as paid: Late Fees: Some systems automatically assign late fees at the start of the day after the due date if money has not been received. In your case, if your bill was due on the 24th, the late fee was probably assessed at midnight of the 25th, and the payment arrived after that during the day of the 25th. You may have been able to initiate the payment on the company's website at 11:59pm on the 24th and not have received a late fee (or whatever their cutoff time is). Suggestion: as a rule of thumb, for utility bills whose due date and amount can vary slightly from month to month, you're usually better off setting up your payments on the company website to pull from your bank account, instead of setting up your bank account to push the payment to the company. This will ensure that you always get the bill paid on time and for the correct amount. If you still would rather push the payment from your bank account, then consider setting up the payment to arrive about 5 days early, to account for holidays and weekends.</code> |
 * Loss: [<code>MultipleNegativesRankingLoss</code>](https://sbert.net/docs/package_reference/sentence_transformer/losses.html#multiplenegativesrankingloss) with these parameters:
   ```json
   {

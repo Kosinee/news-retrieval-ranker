@@ -78,8 +78,8 @@ if __name__ == "__main__":
         model_name=model_name,
         pairs=pairs,
         model_path=model_path,
-        batch_size=cfg["train"]["batch_size"],
-        epochs=cfg["train"]["epochs"],
-        lr=cfg["train"]["lr"],
-        max_seq_length=cfg["train"]["max_seq_length"],
+        batch_size=int(cfg["train"]["batch_size"]),
+        epochs=int(cfg["train"]["epochs"]),
+        lr=float(cfg["train"]["lr"]),
+        max_seq_length=int(cfg["train"]["max_seq_length"]),
     )

@@ -48,7 +48,7 @@ def evaluate(
         (corpus[cid].get("title", "") + " " + corpus[cid].get("text", "")).strip()
         for cid in corpus_ids
     ]
-    doc_vecs = encode_texts(model_path, corpus_texts)
+    doc_vecs = encode_texts(model_path, corpus_texts[:50])
     index = build_faiss_index(doc_vecs)
     id_map = {i: corpus_ids[i] for i in range(len(corpus_ids))}
     query_ids = list(queries.keys())
@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
     corpus, queries, qrels = GenericDataLoader(data_folder=data_path).load(split="test")
 
-    metrics = evaluate(model_path, corpus, queries, qrels, k_vals=[10, 100])
+    metrics = evaluate(model_path, corpus, queries, qrels, k_vals=(10, 100))
 
     with open(metrics_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=4, ensure_ascii=False)

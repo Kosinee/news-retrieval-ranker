@@ -9,191 +9,216 @@ tags:
 - loss:MultipleNegativesRankingLoss
 base_model: sentence-transformers/all-MiniLM-L6-v2
 widget:
-- source_sentence: Smart to buy a house in college?
+- source_sentence: Option Trading / Demo Account
   sentences:
-  - '"I know, this isn''t a direct answer to your question about unloading a used
-    car-- I''ve always donated it to charity and written off the price it got at auction
-    on my taxes -- but I think the following might be useful to anyone facing a big
-    repair bill: You know your car''s condition. (If in doubt, pay your mechanic to
-    evaluate it ""as if he was considering buying it for his daughter"".) If you were
-    shopping for a used car, and you found one exactly like yours, in exactly the
-    same condition, treated exactly as well as you treat yours (and with all the records
-    to prove that), but with the repairs already done... how much would you be willing
-    to pay for it? If that number is more than the repair cost, repairing is a good
-    deal.  If it''s less than the repair cost, is it enough less to justify the hassle
-    of car shopping? If so, unload it and use the repair money to buy something better.
-    If it''s in the middle... flip a coin, or pick whichever makes you feel better."'
-  - '"People have lost money buying houses in good to great neighborhoods.  It''s
-    a pretty large red flag that you state this so clearly ""the neighborhood is pretty
-    bad."" I''d rather buy a bad house in a great neighborhood, and spend my weekends
-    fixing it up, turning sweat equity into real equity. A two year bet? I''d pass.  Close
-    to the school, high demand area, and my answer might change.  (And, ""welcome,
-    stranger"")"'
-  - You could use a stock-only ISA and invest in Exchange Traded Funds (ETFs). ETFs
-    are managed mutual funds that trade on open exchanges in the same manner as stocks.
-    This changes the specific fund options you have open to you, but there are so
-    many ETFs at this point that any sector you want to invest in is almost certainly
-    represented.
-- source_sentence: If the housing market is recovering, why would a REIT index ETF
-    (e.g. VNQ) not be performing well?
+  - If the company went bankrupt, the issued public shares that were outstanding at
+    the time most likely were voided, in which case your shares are most definitely
+    gone.  The company might have done a new stock issuance coming out of bankruptcy
+    with a different symbol, and while it could be substantially the same company,
+    it doesn't mean much for you.  It's unfortunate this may be the case, but it is
+    one of the risks of investing.
+  - '"In real life, you''d see spreads like AMZN 04/13/2017 910.00 C 4.90 +1.67 Bid:
+    4.75 Ask: 5.20 (with AMZN @ $897 right now) and the fill you''d get on the buy
+    side would be closer to the ask. i.e. I''d offer $5.00 and hope that it filled.  Filling
+    a $4 bid when ask is $8 isn''t likely unless the stock blipped down enough for
+    your price to fill.  Options are a lot like day trading, in most cases. Most members
+    here will agree that day trading isn''t investing, it''s gambling. Long term,
+    the S&P has been up 10%/yr. But any given day, the noise of the market is a 50/50
+    zero sum game. Most long term stock ''investors'' do well. Those who get in and
+    out, not so much.  There are aspects to options that are appealing. As you''ve
+    seen, the return can be high, even IRL, but your loss can be 100% as well. Let
+    me share with you a blurred line - I wrote ""Betting on Apple at 9 to 2"" in which
+    I described an option strategy that ran 2 years and would return $10,000 on a
+    $2200 bet. A similar bet that ended a year ago yielded a 100% loss. I don''t post
+    there very often, as I keep that trading to a minimum.  There are warnings for
+    those who want to start trading options -"'
+  - '"It is called ""Credit card installments"" or ""Equal pay installments"", and
+    I am not aware of them being widely used in the USA. While in other countries
+    they are supported by banks directly (right?), in US you may find this option
+    only in some big stores like home improvement stores, car dealerships, cell phone
+    operators (so that you can buy a new phone) etc. Some stores allow 0% financing
+    for, say, 12 months which is not exactly the same as installments but close, if
+    you have discipline to pay $250 each month and not wait for 12 months to end.
+    Splitting the big payment in parts means that the seller gets money in parts as
+    well, and it adds risks of customer default, introduces debt collection possibility
+    etc. That''s why it''s usually up to the merchants to support it - bank does not
+    care in this case, from the bank point of view the store just charges the same
+    card another $250 every month. In other countries banks support this option directly,
+    I think, taking over or dividing the risk with the merchants. This has not happened
+    in US. There is a company SplitIt which automates installments if stores want
+    to support it but again, it means stores need to agree to it. Here is a simple
+    article describing how credit cards work: https://www.usbank.com/credit-cards/how-credit-cards-work.html
+    In general, if you move to US, you are unlikely to be able to get a regular credit
+    card because you will not have any ""credit history"" which is a system designed
+    to track each customer ability to get & pay off debt. The easiest way to build
+    the history - request ""secured credit card"", which means you have to give the
+    bank money up front and then they will give you a credit card with a credit limit
+    equal to that amount. It''s like a ""practice credit card"". You use it for 6-12
+    months and the bank will report your usage to credit bureaus, establishing your
+    ""credit score"". After that you should be able to get your money back and convert
+    your secured card into a regular credit card. Credit history can be also built
+    by paying rent and utilities but that requires companies who collect money to
+    report the payments to credit bureaus and very few do that. As anything else in
+    US, there are some businesses which help to solve this problem for extra money."'
+- source_sentence: Investment for beginners in the United Kingdom
   sentences:
-  - '"I assume your employer does standard withholding?  Then what you need to do
-    is figure what bracket that puts you in after you''ve done all your normal deductions.  Let''s
-    say it''s 25%.  Then multiply your freelance income after business expenses, and
-    that''s your estimated tax, approximately.  (Unless the income causes you to jump
-    a bracket.) To that you have to add approximately 12-13% Social Security/Medicare
-    for income between the $90K and $118,500.  Filling out Form 1040SSE will give
-    you a better estimate. But there is a ""safe harbor"" provision, in that if what
-    you pay in estimated tax (and withholding) this year is at least as much as you
-    owed last year, there''s no penalty.  I''ve always done mine this way, dividing
-    last year''s tax by 4, since my income is quite variable, and I''ve never been
-    able to make sense of the worksheets on the 1040-ES."'
-  - '"VNQ only holds ~16% residential REITs. The rest are industrial, office, retail
-    (e.g. shopping malls), specialized (hotels perhaps?) etc.  Thus, VNQ isn''t as
-    correlated towards housing as you might have assumed just based on it being about
-    ""real estate."" Second of all, if by ""housing"" you mean that actual houses
-    have gone up appreciably, then you ought to realize that residential REITs seldom
-    hold actual houses. The residential units held tend primarily to be rental apartments.
-    There is a relationship in prices, but not direct."'
-  - '"The short answer is that the exchange of the stock in exchange for the elimination
-    of a debt is a taxable exchange, and gains or losses are possible for the stock
-    investor as well as the bank.   The somewhat longer answer is best summarized
-    as noting that banks don''t usually accept stocks as collateral, mostly because
-    stock values are volatile and most banks are not equipped to monitor the risk
-    involved but it is very much part of the business of stock brokers.   In the USA,
-    as a practical matter I only know of stock brokerages offering loans against stock
-    as part of the standard services of a ""margin account"". You can get a margin
-    account at any US stock broker. The stockholder can deposit their shares in the
-    margin account and then borrow around 50% of the value, though that is a bit much
-    to borrow and a lower amount would be safer from sudden demands for repayment
-    in the form of margin calls. In a brokerage account I can not imagine a need to
-    repay a margin loan if the stocks dividends plus capital appreciation rises in
-    value faster than the margin loan rate creates interest charges...  Trouble begins
-    as the stock value goes down.  When the value of the loan exceeds a certain percentage
-    of the stock value, which can depend on the stock and the broker''s policy but
-    is also subject to federal rules like Regulation T, the broker can call in the
-    loan and/or take initiative to sell the stock to repay the loan.   Notice that
-    this may result in a capital gain or loss, depending on the investor''s tax basis
-    which is usually the original cost of the stock.  Of course, this sale affects
-    the taxes of the investor irregardless of who gets the money."'
-- source_sentence: Is it better to pay an insurance deductible, or get an upgrade?
+  - 'After doing this many times, my preferred method is: The reason being that the
+    US banks will use every chance possible to take your money in fees. Usually the
+    German bank website will tell you what the current exchange rate. You were correct
+    in selecting Transfer in $ and got the exchange rate. In my experience if you
+    transfer in Euros, the US bank at the other end, will take about 3-5%, because
+    they can. Selecting OUR means that you only have the fee taken out by the Source
+    bank. By doing shared, it looks like both banks took their full fee. If you chose
+    OUR, I''m fairly certain you just would have paid the 1.50 and the 20. Chase would
+    not have taken the 15.'
+  - Before jumping into stock trading, do try Mutual Funds and Index funds, That should
+    give you some good overview of the equity markets. Further, do read up on building
+    a balanced portfolio to suit your need and risk apetite. This would help you decide
+    on Govt. bonds and other debt instruments.
+  - From a purely financial standpoint, you should invest using whatever dollars get
+    you the best rate. The general rule of thumb that I've come across is that if
+    you are making another person/company change your money into another nation's
+    currency, they will likely charge a higher exchange rate than you could get yourself.
+    However, it really depends on your situation, how easy it is for you to exchange
+    money, what your exchange rate is, and what your broker is charging you to exchange
+    to USD (if on the off chance this is truly nothing, then stick with CAD). Don't
+    worry about the strength of the USD to CAD too much because converting your money
+    before you make purchases doesn't allow you to buy more shares. For the vast majority
+    of people, trying to work with national currency exchange rates makes things unnecessarily
+    complex.
+- source_sentence: Is there any reason to buy shares before/after a split?
   sentences:
-  - '"If it''s an active stock, the Yahoo message boards are inhabited by some clueful
-    people. But the signal-to-noise ratio is relatively low, and there are a lot of
-    ""interesting"" characters who inhabit the boards as well."'
-  - '"I think you have a few choices that cannot be described by math alone: Repair
-    current phone:  149 Replace current phone with new model from carrier:  100 +
-    cost of new phone Replace current phone with new model on payment plan from carrier:  100
-    + cost of new phone + finance charge (could be zero or cleverly hidden). You can
-    also replace the current phone with either a used or new bought from a separate
-    party.  Quite recently I was selling some gently used IPhones 4S for around $140.   So
-    really you have to determine what is most important to you guys.  Is it important
-    to have the newest model phone with laying out the least amount of cash now?  Then
-    by all means go with the payment plan with your current carrier. Is it most important
-    to be financially efficient, while having a good working phone?  Then pay the
-    deductible; or buy something gently used.   In my opinion, having a phone payment
-    is a losing game, akin to buying a new car every three years or so.  You are buying
-    something on time that quickly depreciates and hiding the true cost of the item
-    in ""painless"" monthly payments."'
-  - '"Okay, definitive answer for this particular company (Toyota Finance) is (somewhat
-    surprisingly, and glad I asked) it must be fully insured at all times, including
-    liability, even if being stored.  I asked at a dealership and they answered ""just
-    fire and theft (of course)"" but I ended up calling their finance department and
-    the answer was the opposite. So there you go. Thanks for the answers (and for
-    trying to talk me out of wasting money)."'
-- source_sentence: My wife and I are selling a house worth $230k-$260k. Its a rental.
-    Should we use an agent, limited service listing agent, or FSBO?
+  - 'The nature of this question (finding a financial adviser) can make it a conundrum.
+    Those who have little financial experience are often in the greatest need of a
+    financial adviser and at the same time are the least qualified to select one.
+    I''m not putting you or anyone in particular in this category. And of course it''s
+    a sliding scale: In general the more capable you are of running your own finances
+    the more prepared you are to answer this question. With that said, I would recommend
+    backing up half a step. Consider advisers other than strictly fee-only advisers.
+    Perhaps you have already considered this decision. But perhaps others reading
+    this have not. My (Ameriprise) adviser charges a monthly (~$50) fee, but also
+    gets percentage-based portions of certain investments. Based on a $150/hr rate
+    that amounts to four hours per year. Does he spend four hours per year on my account?
+    Well so far he does (~2 yrs). But that is determined primarily by how much interaction
+    I choose to have with him. (I suppose I could spend more time asking him questions
+    and less time on this forum. :P) I have never fully understood the gravitation
+    towards fee-based advisers on principle. I guess the theory is they are not making
+    biased decisions about your investments because they don''t have as much of a
+    stake in how well your investments to do. I don''t necessarily see that as an
+    advantage. It seems they would have less of an incentive to ensure the growth
+    of your investments. Although if you''re nearing retirement then growth isn''t
+    your biggest concern. Perhaps a fee-based adviser makes more sense in that scenario.
+    Whatever pay structure your adviser uses, it would seem to make sense to consider
+    a successful adviser with a good client base. This implies that the adviser knows
+    what he/she is doing. (But it could also just be a sign that they are good at
+    marketing themselves.) If your adviser has a good base of wealthy clients then
+    choosing a strictly-fee based adviser would mitigate the risk of your adviser
+    having less incentive to consider your portfolio vs that of more wealthy clients.
+    To more directly answer your question I suggest asking several of your adviser
+    candidates for advice on choosing an adviser. I suspect you will get some good
+    advice as well as good insight on the integrity and honesty of the adviser.'
+  - 'There has been a lot of research on the effects of stock splits. Some studies
+    have concluded that: However note that (i) these are averages over large samples
+    and does not say it will work on every split and (ii) most of the research is
+    a bit dated and more recent papers have often struggled to find any significant
+    performance impact after 1990, possibly because the effect has been well documented
+    and the arbitrage no longer exists. This document summarises the existing research
+    on the subject although it seems to miss some of the more recent papers. More
+    practically, if you pay a commission per share, you will pay more commissions
+    after the split than before. Bottom line: don''t overthink it and focus on other
+    criteria to decide when/whether to invest.'
+  - 'Look into the asset allocations of lifecycle funds offered by a company like
+    Vanguard. This page allows you to select your current age and find a fund based
+    on that. You could pick a fund, like the Target Retirement 2055 Fund (ages 21-25),
+    and examine its allocation in the Portfolio & Management tab. For this fund, the
+    breakdown is: Then, look at the allocation of the underlying funds that comprise
+    the lifecycle fund, in the same tab.  Look at each of those funds and see what
+    asset allocation they use, and that should give you a rough idea for an age-based
+    allocation. For example, the Total Stock Market Index Fund page has a sector breakdown,
+    so if you wanted to get very fine-grained with your allocation, you could. (You''re
+    probably much better off investing in the index fund, low-cost ETFs, or the lifecycle
+    fund itself, however; it''ll be much cheaper).  Doing this for several lifecycle
+    funds should be a good start. Keep in mind, however, that these funds are rebalanced
+    as the target date approaches, so if you''re following the allocation of some
+    particular funds, you''ll have to rebalance as well. If you really want an age-based
+    allocation that you don''t have to think about, invest in a lifecycle fund directly.
+    You''ll probably pay a lower expense ratio than if you invested in a whole slew
+    of funds directory, and it''s less work for someone who isn''t comfortable managing
+    their portfolio themselves. Furthermore, with Vanguard, the expense ratios are
+    already fairly low.  This is only one example of an allocation, however; your
+    tolerance of risk, age, etc. may affect what allocation you''re willing to accept.  Full
+    disclosure: Part of my Roth IRA is invested in the Target 2055 fund I used as
+    an example above, and another part uses a similar rebalancing strategy to the
+    one I used above, but with Admiral Share funds, which have higher minimum investments
+    but lower expense ratios.'
+- source_sentence: What are the advantages of paying off a mortgage quickly?
   sentences:
-  - '"The S&P 500 index is maintained by S&P Dow Jones Indices, a division of McGraw
-    Hill Financial. Changes to the index are made periodically, as needed.  For Facebook,
-    you''ll find it mentioned in this December 11, 2013 press release (PDF).  Quote:
-    New York, NY, December 11 , 2013 – S&P Dow Jones Indices will make the following
-    changes to the S&P 100, S&P 500, MidCap 400   and S&P SmallCap 600 indices after
-    the close of trading on Friday,   December 20: You can find out more about the
-    S&P 500 index eligibility criteria from the S&P U.S. Indices methodology document
-    (PDF).  See pages 5 and 6: Market Capitalization - [...] Liquidity - [...] Domicile
-    - [...] Public Float - [...] Sector Classification - [...] Financial Viability
-    - Usually measured as four consecutive quarters of positive as   reported earnings.
-    [...] Treatment of IPOs - Initial public offerings should be seasoned for 6 to
-    12 months   before being considered for addition to an index. Eligible Securities
-    - [...]   [...]   Changes to the U.S. indices other than the TMIX are made as
-    needed,   with no annual or  semi-annual reconstitution. [...] LabCorp may have
-    a smaller market cap than Facebook, but Facebook didn''t meet all of the eligibility
-    criteria – for instance, see the above note about ""Treatment of IPOs"" – until
-    recently. Note also that ""Initial public offerings should be seasoned for 6 to
-    12 months"" implies somebody at S&P makes a decision as to the exact when. As
-    such, I would say, no, there is no ""simple rule or formula"", just the methodology
-    above as applied by the decision-makers at S&P."'
-  - '"In most jurisdictions, both the goods (raw materials) and the service (class)
-    are being ""sold"" to the customer, who is the end user and thus the sale is subject
-    to sales tax. So, when your friend charges for the class, that $100 is subject
-    to all applicable sales taxes for the jurisdiction and all parent jurisdictions
-    (usually city, county and state). The teacher should not have to pay sales tax
-    when they buy the flowers from the wholesaler; most jurisdictions charge sales
-    tax on end-user purchases only. However, they are required to have some proof
-    of sales tax exemption for the purchase, which normally comes part and parcel
-    with the DBA or other business entity registration paperwork in most cities/states.  Wholesalers
-    deal with non-end-user sales (exempt from sales tax) all the time, but your average
-    Michael''s or Hobby Lobby may not be able to deal with this and may have to charge
-    your friend the sales tax at POS. Depending on the jurisdiction, if this happens,
-    your friend may be able to reduce the amount the customer is paying that is subject
-    to sales tax by the pre-tax value of the materials the customer has paid for,
-    which your friend already paid the tax on."'
-  - The answers you'll receive are going to be largely subjective. I can't tell you
-    which option would be best for you, but there are plenty of things to consider.  Do
-    you know how to sell a home? If your market is hot enough, FSBO may make sense
-    as you won't need the marketing power and expertise of an agent. In very hot markets,
-    you'll end up with potential bidding wars if you price your house correctly. But
-    that's where things start getting tricky. Do you know what your house is realistically
-    worth in your market, or are you making assumptions based on Zillow (or similar)?
-    Do you know what paper work is needed to complete a FSBO sale? Are you any good
-    at negotiating? There are certainly plenty of resources out there for FSBO sellers
-    to learn how to do it, but it can be overwhelming.  FSBO isn't really fee free.
-    If the buyer has an agent, they'll want a percentage (3%) for setting up their
-    part of the sale. Without experience in negotiation, you may be leaving a decent
-    amount of money on the table. Also, in negotiations, an experienced agent may
-    nickel & dime you with contingencies all the way up until closing. Then there's
-    anything you might need to pay for marketing materials and time off from work
-    (if needed) to have the house shown. However, if you're in a market where people
-    are literally walking up to your door to ask if you'd consider selling and for
-    how much (which just happened to a friend of mine), then it might actually be
-    a pretty painless process.  Traditional agents charge a fee, but that fee goes
-    towards marketing and their experience in sales and negotiations. They do the
-    work of getting your property in front of the right people and setting up house
-    showings. The work is done on your behalf, and you won't need to alter your personal
-    work schedule anywhere near as much as you would with FSBO. They only get paid
-    if the house sells. Limited service agents are a bit of an unknown to me, but
-    it's more than likely the buyer will have an agent, so assume the higher fee.
-    It also appears that the LSA gets paid at least $500 no matter what happens, so
-    they're certainly not putting in any extra effort to help get your house sold.
-    It appears that you're simply paying to get on their list of homes and get some
-    marketing from them, but that's about it. I'd imagine you could get the same exposure
-    as a well educated FSBO seller.
-- source_sentence: Why is it possible to just take out a ton of credit cards, max
-    them out and default in 7 years?
+  - 'While technically true, a card issuer can cancel your card for almost any reason
+    they want, it''s highly unlikely they''ll cancel it because you pay your bills!
+    There are many, many people out there that pay their bills in full every month
+    without ever paying a cent in credit card interest. I wouldn''t ever purposefully
+    incur any interest on a credit card. Related anecdote: I used to have a credit
+    card that I only used for gas purchases because they gave 5% off for fuel. The
+    issuer eventually discontinued the program (I assume because people like me took
+    advantage of it.) So while they didn''t cancel my card, the bonus eventually went
+    away. I miss that card. My conclusion: if you can take advantage of promotional
+    rates, by all means, go for it. You don''t owe them any favors. Enjoy it as long
+    as it lasts.'
+  - The reason is in your own question. The answer is simple. They use that code to
+    tax the product otherwise it would just be out of pocket expenses.
+  - 'From my experience and friends'' experiences, I can say that there are advantages
+    and disadvantages for paying off your mortgage quickly. Basically, it depends
+    on these factors: the type of the mortgage, its interest rate, your financial
+    stability, your skills in making investments and other outside factors, such as
+    inflation, liquidity, oppurtunity cost, etc. Paying it off means you save on interest
+    ratings, you decrease investment risks and your investment rates are taxable.
+    Disadvantages are that you cannot use this money for investing, you cannot use
+    this money for tax deductions and that in a state of inflation, not paying it
+    off in advance could save you a lot of money.  However, I always recommend to
+    read some more on websites that deal with mortgages, and speak with the mortgage
+    expert in your bank.Just acquire enough information to make a good assessment.
+    An interesting article on this topic - The Advantages and Disadvantages of Paying
+    Off Your Mortgage'
+- source_sentence: Can paying down a mortgage be considered an “investment”?
   sentences:
-  - You could consider buying a fairly recent used car from CarMax. They have fixed
-    pricing, and you'd save a good amount of money on the car (since cars lose tons
-    of value in their first year or so).
-  - '"Check how long you have to hold the stock after buying it. If you can sell reasonably
-    soon and your company is reasonably stable, you''re unlikely to lose and/or be
-    taxed and/or pay enough in fees to lose more than the 30% ""free money"" they''re
-    giving you.  Whether you hold it longer than the minimum time depends partly on
-    whether you think you can better invest the money elsewhere, and partly on how
-    you feel about having both your salary and (part of) your investments tied to
-    the company''s success? The company would like you to ""double down"" that way,
-    in the theory that it may make you mors motivated... but some investment councelors
-    would advise keeping that a relatively small part of your total investments, basically
-    for the same reasons you are always advised to diversify."'
-  - I should apply for everything I can on the same day, get approved for as many
-    as I can First it may not sound as easy. You may hardly get 2-3 cards and not
-    dozens. Even if you submit the applications the same day; If you still plan this
-    and somehow get too many cards, and draw huge debt, then the Banks can take this
-    seriously and file court case. If Banks are able to establish the intent; this
-    can get constituted as fraud and liable for criminal proceedings. So in short
-    if someone has the money and don't want to pay; the court can attach the wage
-    or other assets and make the person pay. If the intent was fraud one can even
-    be sent to jail.
+  - '"Your #1 problem is the Government both in it''s form as a taxation outfit and
+    as a ''law and order'' outfit.  You''d be very surprised at how fast a bank seizes
+    your bank account in response to a court order.  Purchase 100 Mexican 50 Peso
+    Gold (1.2 oz/ea).  These coins are cheap (lowest cost to get into) and will not
+    be reportable on sale to taxing authorities.  That money is out of the banking
+    system and legal system(s).  Do not store them in a bank! You need to find a tax
+    strategist, probably a former IRS agent / CPA type. With the rest remaining money...  There''s
+    an old saying, Don''t fight the Fed.  As well as ""The trend is your friend"".  So,
+    the Fed wants all savers fully invested right now (near 0 interest rates). When
+    investing, I find that if you do exactly opposite what you think is the smart
+    thing, that''s the best thing.  Therefore, it follows: 1) Don''t fight the Fed
+    2) Do opposite of smart 3) Do: Fight the Fed (and stay 100% out of the market
+    and in cash) We''re looking like Japan so could remain deflationary for decades
+    to come.  Cash is king..."'
+  - '"Another problem with this plan (assuming you get past Rocky''s answer somehow)
+    is that you assume that $50K in construction costs will translate to $50K in increased
+    value. That''s not always true; the ROI on home improvements is usually a lot
+    less than 100%. You''d also owe more property taxes on your improvements, which
+    would cut into your plan somewhat. But you also can''t keep doing this forever.
+    Soon enough, you''d run out of physical and/or legal space to keep adding additions
+    to the house (zoning tends to limit how much you can build, unless you''re in
+    the middle of nowhere, and eventually you''d fill the lot), even if you did manage
+    to keep obtaining more and more loans. And you''d quickly reach the point of diminishing
+    returns on your expansions. Many homebuyers might be prepared to pay more for
+    a third or fourth bedroom, but vanishingly few in most markets will pay substantially
+    more for a second billiards room or a third home theater. At some point, your
+    house isn''t a mansion, it''s ""that ridiculous castle"" only an eccentric would
+    want, and the pool of potential buyers (and the price they''ll pay for it) diminishes.  And
+    the lender, not being stupid, isn''t going to go on financing your creation of
+    a monstrosity, because they are the ones who will be stuck with the place if you
+    default."'
+  - If your mortgage interest is tax-deductible, it's generally a bad idea to pay
+    down the principal on the mortgage because you'd be losing the tax deduction.
+    You could instead invest it in a tax-free municipal bond fund, especially if you're
+    in a high tax bracket (including state and local marginal tax rates). For example,
+    if you have a 5% rate mortgage on your home, you could invest in a 3.5% municipal
+    bond and still come out ahead when you apply the tax deduction to your income
+    at a 44% (33% federal + 7% state + 4% city in NYC) marginal tax rate.
 datasets: []
 pipeline_tag: sentence-similarity
 library_name: sentence-transformers
@@ -249,9 +274,9 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer("sentence_transformers_model_id")
 # Run inference
 sentences = [
-    'Why is it possible to just take out a ton of credit cards, max them out and default in 7 years?',
-    "I should apply for everything I can on the same day, get approved for as many as I can First it may not sound as easy. You may hardly get 2-3 cards and not dozens. Even if you submit the applications the same day; If you still plan this and somehow get too many cards, and draw huge debt, then the Banks can take this seriously and file court case. If Banks are able to establish the intent; this can get constituted as fraud and liable for criminal proceedings. So in short if someone has the money and don't want to pay; the court can attach the wage or other assets and make the person pay. If the intent was fraud one can even be sent to jail.",
-    '"Check how long you have to hold the stock after buying it. If you can sell reasonably soon and your company is reasonably stable, you\'re unlikely to lose and/or be taxed and/or pay enough in fees to lose more than the 30% ""free money"" they\'re giving you.  Whether you hold it longer than the minimum time depends partly on whether you think you can better invest the money elsewhere, and partly on how you feel about having both your salary and (part of) your investments tied to the company\'s success? The company would like you to ""double down"" that way, in the theory that it may make you mors motivated... but some investment councelors would advise keeping that a relatively small part of your total investments, basically for the same reasons you are always advised to diversify."',
+    'Can paying down a mortgage be considered an “investment”?',
+    "If your mortgage interest is tax-deductible, it's generally a bad idea to pay down the principal on the mortgage because you'd be losing the tax deduction. You could instead invest it in a tax-free municipal bond fund, especially if you're in a high tax bracket (including state and local marginal tax rates). For example, if you have a 5% rate mortgage on your home, you could invest in a 3.5% municipal bond and still come out ahead when you apply the tax deduction to your income at a 44% (33% federal + 7% state + 4% city in NYC) marginal tax rate.",
+    '"Another problem with this plan (assuming you get past Rocky\'s answer somehow) is that you assume that $50K in construction costs will translate to $50K in increased value. That\'s not always true; the ROI on home improvements is usually a lot less than 100%. You\'d also owe more property taxes on your improvements, which would cut into your plan somewhat. But you also can\'t keep doing this forever. Soon enough, you\'d run out of physical and/or legal space to keep adding additions to the house (zoning tends to limit how much you can build, unless you\'re in the middle of nowhere, and eventually you\'d fill the lot), even if you did manage to keep obtaining more and more loans. And you\'d quickly reach the point of diminishing returns on your expansions. Many homebuyers might be prepared to pay more for a third or fourth bedroom, but vanishingly few in most markets will pay substantially more for a second billiards room or a third home theater. At some point, your house isn\'t a mansion, it\'s ""that ridiculous castle"" only an eccentric would want, and the pool of potential buyers (and the price they\'ll pay for it) diminishes.  And the lender, not being stupid, isn\'t going to go on financing your creation of a monstrosity, because they are the ones who will be stuck with the place if you default."',
 ]
 embeddings = model.encode(sentences)
 print(embeddings.shape)
@@ -309,16 +334,16 @@ You can finetune this model on your own dataset.
 * Size: 14,131 training samples
 * Columns: <code>sentence_0</code> and <code>sentence_1</code>
 * Approximate statistics based on the first 1000 samples:
-  |         | sentence_0                                                                       | sentence_1                                                                         |
-  |:--------|:---------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
-  | type    | string                                                                           | string                                                                             |
-  | details | <ul><li>min: 4 tokens</li><li>mean: 16.1 tokens</li><li>max: 40 tokens</li></ul> | <ul><li>min: 6 tokens</li><li>mean: 110.3 tokens</li><li>max: 128 tokens</li></ul> |
+  |         | sentence_0                                                                        | sentence_1                                                                          |
+  |:--------|:----------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
+  | type    | string                                                                            | string                                                                              |
+  | details | <ul><li>min: 4 tokens</li><li>mean: 15.55 tokens</li><li>max: 40 tokens</li></ul> | <ul><li>min: 8 tokens</li><li>mean: 111.68 tokens</li><li>max: 128 tokens</li></ul> |
 * Samples:
-  | sentence_0                                                                                      | sentence_1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-  |:------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-  | <code>Do I make money in the stock market from other people losing money?</code>                | <code>"Do I make money in the stock market from other people losing money? Not normally.* The stock market as a whole, on average, increases in value over time. So if we make the claim that the market is a zero-sum game, and you only make money if other people lose money, that idea is not sustainable. There aren't that many people that would keep investing in something only to continue to lose money to the ""winners."" The stock market, and the companies inside it, grow in value as the economy grows. And the economy grows as workers add value with their work.  Here's an analogy: I can buy a tree seed for very little and plant it in the ground. If I do nothing more, it probably won't grow, and it will be worth nothing. However, by taking the time to water it, fertilize it, weed it, prune it, and harvest it, I can sell the produce for much more than I purchased that seed for. No one lost money when I sell it; I increased the value by adding my effort.  If I sell that tree to a sawmill, they can cut the tree into usable lumber, and sell that lumber at a profit. They added their efforts and increased the value.  A carpenter can increase the value even further by making something useful (a door, for example). A retail store can make that door more useful by transporting it to a location with a buyer, and a builder can make it even more useful by installing it on a house.  No one lost any money in any of these transactions. They bought something valuable, and made it more valuable by adding their effort.  Companies in the stock market grow in value the same way. A company will grow in value as its employees produce things. An investor provides capital that the company uses to be able to produce things**, and as the company grows, it increases in value. As the population increases and more workers and customers are born, and as more useful things are invented, the economy will continue to grow as a whole.  * Certainly, it is possible, even common, to profit from someone else's loss.  People lose money in the stock market all the time.  But it doesn't have to be this way.  The stock market goes up, on average, over the long term, and so long term investors can continue to make money in the market even without profiting from others' failures. ** An investor that purchases a share from another investor does not directly provide capital to the company.  However, this second investor is rewarding the first investor who did provide capital to the company.  This is the reason that the first investor purchased in the first place; without the second investor, the first would have had no reason to invest and provide the capital.  Relating it to our tree analogy: Did the builder who installed the door help out the tree farmer?  After all, the tree farmer already sold the tree to the sawmill and doesn't care what happens to it after that.  However, if the builder had not needed a door, the sawmill would have had no reason to buy the tree."</code> |
-  | <code>Which kind of investment seems feasible to have more cashflow every week or month?</code> | <code>I'll mirror what the others have said in that your expectations for returns are wildly out of line with reality. If you could achieve that with only moderate risk hopefully you can see that you could ladder those returns by re-investing them and become a billionaire in short order. You may have noticed that there are a lot of really financially savvy people who are not billionaires. So the math for your plan falls apart somewhere, obviously. However, in the spirit of being helpful, and with the caveat that super high returns involve super high risk I'll try and point you in the direction where this is theoretically possible, even if the odds would be better buying lottery tickets. One way to get more leverage from your money than just buying stocks is to buy options. With an options strategy your return/loss will be magnified greatly compared to buying stocks. That is, you can lose or gain a much higher multiplier of your original investment. That said, I don't advise doing that with any money that you can't afford to lose every penny of, because you likely will.</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-  | <code>As an employer, how do I start a 401k or traditional IRA plan?</code>                     | <code>Here is a nice overview from Vanguard on some options for a small business owner to offer retirement accounts.   https://investor.vanguard.com/what-we-offer/small-business/compare-plans I would look over the chart and decide which avenue is best for you and then call around to investment companies (Vanguard, Fidelity, etc. etc.) asking for pricing information.</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+  | sentence_0                                                                                                             | sentence_1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+  |:-----------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | <code>Stock trading after a crash</code>                                                                               | <code>"There are two things going on here, neither of which favors this approach. First, as @JohnFx noted, you should be wary of the sunk-cost fallacy, or throwing good money after bad. You already lost the money you lost, and there's no point in trying to ""win it back"" as opposed to just investing the money you still have as wisely as possible, forgetting your former fortune. Furthermore, the specific strategy you suggest is not a good one. The problem is that you're assuming that, whenever the stock hits $2, it will eventually rebound to $3. While that may often happen, it's far from guaranteed. More specifically, assuming the efficient market hypothesis applies (which it almost certainly does), there are theorems that say you can't increase your expected earning with a strategy like the one you propose: the apparent stability of the steady stream of income is offset by the chance that you lose out if the stock does something you didn't anticipate."</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+  | <code>Previous owner of my home wants to buy it back but the property's value is less than my loan… what to do?</code> | <code>It's a short sale. See these for good overviews: http://www.realtor.org/library/library/fg335 http://homebuying.about.com/od/4closureshortsales/a/shortsalebasics.htm  You'll want input from your lawyer and accountant (assuming the lender says they would accept such a sale). Best of luck - sounds like this could be a great opportunity for you if it all comes together. DO NOT talk to a realtor.</code>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+  | <code>Is there a general guideline for what percentage of a portfolio should be in gold?</code>                        | <code>I think most financial planners or advisors would allocate zero to a gold-only fund. That's probably the mainstream view. Metals investments have a lot of issues, more elaboration here: What would be the signs of a bubble in silver? Also consider that metals (and commodities, despite a recent drop) are on a big run-up and lots of random people are saying they're the thing to get in on. Usually this is a sign that you might want to wait a bit or at least buy gradually.  The more mainstream way to go might be a commodities fund or all-asset fund. Some funds you could look at (just examples, not recommendations) might include several PIMCO funds including their commodity real return and all-asset; Hussman Strategic Total Return; diversified commodities index ETFs; stuff like that has a lot of the theoretical benefits of gold but isn't as dependent on gold specifically. Another idea for you might be international bonds (or stocks), if you feel US currency in particular is at risk. Oh, and REITs often come up as an inflation-resistant asset class. I personally use diversified funds rather than gold specifically, fwiw, mostly for the same reason I'd buy a fund instead of individual stocks. 10%-ish is probably about right to put into this kind of stuff, depending on your overall portfolio and goals. Pure commodities should probably be less than funds with some bonds, stocks, or REITs, because in principle commodities only track inflation over time, they don't make money. The only way you make money on them is rebalancing out of them some when there's a run up and back in when they're down. So a portfolio with mostly commodities would suck long term. Some people feel gold's virtue is tangibility rather than being a piece of paper, in an apocalypse-ish scenario, but if making that argument I think you need physical gold in your basement, not an ETF.  Plus I'd argue for guns, ammo, and food over gold in that scenario. :-)</code> |
 * Loss: [<code>MultipleNegativesRankingLoss</code>](https://sbert.net/docs/package_reference/sentence_transformer/losses.html#multiplenegativesrankingloss) with these parameters:
   ```json
   {

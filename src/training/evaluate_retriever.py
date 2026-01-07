@@ -2,6 +2,7 @@ from __future__ import annotations
 import json
 from datetime import datetime
 import yaml
+import os
 import numpy as np
 from typing import Dict, List
 import faiss
@@ -48,8 +49,8 @@ def evaluate(
         (corpus[cid].get("title", "") + " " + corpus[cid].get("text", "")).strip()
         for cid in corpus_ids
     ]
-    doc_vecs = encode_texts(model_path, corpus_texts[:50])
-    index = build_faiss_index(doc_vecs)
+    corpus_vecs = encode_texts(model_path, corpus_texts)
+    index = build_faiss_index(corpus_vecs)
     id_map = {i: corpus_ids[i] for i in range(len(corpus_ids))}
     query_ids = list(queries.keys())
     query_texts = [queries[qid] for qid in query_ids]
@@ -75,6 +76,8 @@ if __name__ == "__main__":
     corpus, queries, qrels = GenericDataLoader(data_folder=data_path).load(split="test")
 
     metrics = evaluate(model_path, corpus, queries, qrels, k_vals=(10, 100))
+
+    os.makedirs(cfg["train"]["metrics_path"], exist_ok=True)
 
     with open(metrics_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=4, ensure_ascii=False)

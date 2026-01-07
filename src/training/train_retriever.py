@@ -1,18 +1,21 @@
 from __future__ import annotations
 import os
+import random
 import yaml
 from typing import List, Dict
 from sentence_transformers import SentenceTransformer, InputExample, losses
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, Sampler
 from beir.datasets.data_loader import GenericDataLoader
+import torch
 
 
 def build_pairs_from_qrels(
     queries: Dict[str, str],
     corpus: Dict[str, Dict[str, str]],
     qrels: Dict[str, Dict[str, int]],
-) -> List[InputExample]:
+) -> tuple[List[InputExample], Dict[str, List[int]]]:
     pairs = []
+    qid_to_idxs: Dict[str, List[int]] = {}
 
     for qid, rel_docs in qrels.items():
         query_text = queries.get(qid)
@@ -25,12 +28,29 @@ def build_pairs_from_qrels(
                 doc_text = (doc_entry.get("title", "") + " " + doc_entry.get("text", "")).strip()
                 if doc_text:
                     pairs.append(InputExample(texts=[query_text, doc_text]))
-    return pairs
+                    qid_to_idxs.setdefault(qid, []).append(len(pairs) - 1)
+    return pairs, qid_to_idxs
+
+
+class UniqueQuerySampler(Sampler[int]):
+    def __init__(self, qid_to_idxs: Dict[str, List[int]]):
+        self.qid_to_idxs = qid_to_idxs
+
+    def __iter__(self):
+        qids = list(self.qid_to_idxs.keys())
+        random.shuffle(qids)
+        for qid in qids:
+            idx = random.choice(self.qid_to_idxs[qid])
+            yield idx
+
+    def __len__(self) -> int:
+        return len(self.qid_to_idxs)
 
 
 def train_bi_encoder(
     model_name: str,
     pairs: List[InputExample],
+    qid_to_idxs: Dict[str, List[int]],
     model_path: str,
     batch_size: int = 64,
     epochs: int = 1,
@@ -40,16 +60,21 @@ def train_bi_encoder(
     model = SentenceTransformer(model_name)
     model.max_seq_length = max_seq_length
 
-    loader = DataLoader(pairs, batch_size=batch_size, shuffle=True)
+    sampler = UniqueQuerySampler(qid_to_idxs)
+    loader = DataLoader(pairs, sampler=sampler, batch_size=batch_size)
     loss_fn = losses.MultipleNegativesRankingLoss(model)
     warmup = int(0.1 * max(1, len(loader)))
+
+    use_amp = True
+    if torch.backends.mps.is_available() and torch.__version__ < "2.5.0":
+        use_amp = False
 
     model.fit(
         [(loader, loss_fn)],
         epochs=epochs,
         optimizer_params={"lr": lr},
         warmup_steps=warmup,
-        use_amp=True,
+        use_amp=use_amp,
         output_path=model_path,
     )
 
@@ -72,11 +97,12 @@ if __name__ == "__main__":
 
     corpus, queries, qrels = GenericDataLoader(data_folder=data_path).load(split="train")
 
-    pairs = build_pairs_from_qrels(queries, corpus, qrels)
+    pairs, qid_to_idxs = build_pairs_from_qrels(queries, corpus, qrels)
 
     train_bi_encoder(
         model_name=model_name,
         pairs=pairs,
+        qid_to_idxs=qid_to_idxs,
         model_path=model_path,
         batch_size=int(cfg["train"]["batch_size"]),
         epochs=int(cfg["train"]["epochs"]),

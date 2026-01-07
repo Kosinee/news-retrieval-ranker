@@ -1,0 +1,73 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python -m src.training.prepare_data --config config/retriever.yaml
+    deps:
+    - path: config/retriever.yaml
+      hash: md5
+      md5: 8c1e88b18ad2e11574c7cdb438a6d1ce
+      size: 298
+    - path: src/training/prepare_data.py
+      hash: md5
+      md5: 1c2e95b5c1acdb65ae6d35a757ec141a
+      size: 1051
+    - path: static/data/fiqa
+      hash: md5
+      md5: 55942e366932bd3eb83d303a7dbc6734.dir
+      size: 48909169
+      nfiles: 5
+    outs:
+    - path: static/data/fiqa_prepared
+      hash: md5
+      md5: 55942e366932bd3eb83d303a7dbc6734.dir
+      size: 48909169
+      nfiles: 5
+  train:
+    cmd: python -m src.training.train_retriever --config config/retriever.yaml
+    deps:
+    - path: config/retriever.yaml
+      hash: md5
+      md5: 8c1e88b18ad2e11574c7cdb438a6d1ce
+      size: 298
+    - path: src/training/train_retriever.py
+      hash: md5
+      md5: e7fe50797543031b64e77a3d2e78ab78
+      size: 3308
+    - path: static/data/fiqa_prepared
+      hash: md5
+      md5: 55942e366932bd3eb83d303a7dbc6734.dir
+      size: 48909169
+      nfiles: 5
+    outs:
+    - path: static/artifacts/retriever_fiqa
+      hash: md5
+      md5: dd17eb4fdf0c89d6db8740648df16a57.dir
+      size: 91848167
+      nfiles: 11
+  evaluate:
+    cmd: python -m src.training.evaluate_retriever --config 
+      config/retriever.yaml --output static/metrics/metrics.json
+    deps:
+    - path: config/retriever.yaml
+      hash: md5
+      md5: 8c1e88b18ad2e11574c7cdb438a6d1ce
+      size: 298
+    - path: src/training/evaluate_retriever.py
+      hash: md5
+      md5: c2ec957c60b7f849111983990e04f4c3
+      size: 2919
+    - path: static/artifacts/retriever_fiqa
+      hash: md5
+      md5: dd17eb4fdf0c89d6db8740648df16a57.dir
+      size: 91848167
+      nfiles: 11
+    - path: static/data/fiqa_prepared
+      hash: md5
+      md5: 55942e366932bd3eb83d303a7dbc6734.dir
+      size: 48909169
+      nfiles: 5
+    outs:
+    - path: static/metrics/metrics.json
+      hash: md5
+      md5: f704225514cff0f9009b50b36dcf2725
+      size: 148

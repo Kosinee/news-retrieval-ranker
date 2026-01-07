@@ -21,8 +21,9 @@ def fiqa_data():
 
 def test_train_pipeline_smoke(tmp_path, fiqa_data):
     corpus, queries, qrels = fiqa_data
-    pairs = build_pairs_from_qrels(queries, corpus, qrels)
+    pairs, qid_to_idxs = build_pairs_from_qrels(queries, corpus, qrels)
 
     assert len(pairs) == 2
     assert all(hasattr(p, "texts") for p in pairs)
     assert all(len(p.texts) == 2 for p in pairs)
+    assert set(qid_to_idxs.keys()) == set(qrels.keys())

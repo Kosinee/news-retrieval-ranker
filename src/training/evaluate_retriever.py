@@ -66,18 +66,22 @@ if __name__ == "__main__":
     import argparse
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default="config/retriever.yaml", help="Path to retriever.yaml")
+    ap.add_argument("--output", default=None, help="Optional metrics output path")
     args = ap.parse_args()
 
     cfg = yaml.safe_load(open(args.config))
     model_path = cfg["model"]["path"]
     data_path = cfg["dataset"]["path"]
-    metrics_path = cfg["train"]["metrics_path"] + "/" + datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+    if args.output:
+        metrics_path = args.output
+    else:
+        metrics_path = cfg["train"]["metrics_path"] + "/" + datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
 
     corpus, queries, qrels = GenericDataLoader(data_folder=data_path).load(split="test")
 
     metrics = evaluate(model_path, corpus, queries, qrels, k_vals=(10, 100))
 
-    os.makedirs(cfg["train"]["metrics_path"], exist_ok=True)
+    os.makedirs(os.path.dirname(metrics_path) or ".", exist_ok=True)
 
     with open(metrics_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=4, ensure_ascii=False)

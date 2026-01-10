@@ -2,7 +2,8 @@ random_seed: 42
 
 dataset:
   name: fiqa
-  path: static/data/fiqa
+  raw_path: static/data/fiqa
+  path: static/data/fiqa_prepared
 
 model:
   name: sentence-transformers/all-MiniLM-L6-v2

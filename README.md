@@ -26,6 +26,11 @@
 - `queries.jsonl` — запросы (`_id`, `text`);
 - `qrels.tsv` — разметка релевантности (query → doc → rel).
 
+**Где лежат данные и модели (DVC):**
+- Raw-данные: `static/data/fiqa`
+- Подготовленные данные: `static/data/fiqa_prepared`
+- Итоговая модель: `static/artifacts/retriever_fiqa`
+
 **Предобработка:**
 - Поле документа: `text_joined = title + " " + text"`;
 - Используется `split="train"` для обучения и `split="test"` для оценки;
@@ -62,7 +67,22 @@
 ```bash
 # скачиваем зависимости
 pip install -r requirements.txt
-# запускаме обучение
+# восстановление артефактов (если используется DVC)
+dvc pull
+# прогон пайплайна
+dvc repro
+# запускаем обучение вручную (если без DVC)
 python -m src.training.train_retriever
 # сбор метрик
 python -m src.training.evaluate_retriever
+```
+
+## 📦 DVC: восстановление и воспроизводимость
+
+Полное восстановление версии данных/модели:
+```bash
+git clone <repo>
+cd news-retrieval-ranker
+dvc pull
+dvc repro
+```

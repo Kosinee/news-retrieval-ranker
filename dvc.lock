@@ -31,8 +31,8 @@ stages:
       size: 298
     - path: src/training/train_retriever.py
       hash: md5
-      md5: e7fe50797543031b64e77a3d2e78ab78
-      size: 3308
+      md5: c1bdd11b960bf5d519d18e36d21082f5
+      size: 7762
     - path: static/data/fiqa_prepared
       hash: md5
       md5: 55942e366932bd3eb83d303a7dbc6734.dir
@@ -41,8 +41,8 @@ stages:
     outs:
     - path: static/artifacts/retriever_fiqa
       hash: md5
-      md5: dd17eb4fdf0c89d6db8740648df16a57.dir
-      size: 91848167
+      md5: cecff5b5255cf1fb585725723cd78ccc.dir
+      size: 91859783
       nfiles: 11
   evaluate:
     cmd: python -m src.training.evaluate_retriever --config 
@@ -54,12 +54,12 @@ stages:
       size: 298
     - path: src/training/evaluate_retriever.py
       hash: md5
-      md5: c2ec957c60b7f849111983990e04f4c3
-      size: 2919
+      md5: 715f932efecbfdf4c43095be37d76923
+      size: 3699
     - path: static/artifacts/retriever_fiqa
       hash: md5
-      md5: dd17eb4fdf0c89d6db8740648df16a57.dir
-      size: 91848167
+      md5: cecff5b5255cf1fb585725723cd78ccc.dir
+      size: 91859783
       nfiles: 11
     - path: static/data/fiqa_prepared
       hash: md5
@@ -69,5 +69,5 @@ stages:
     outs:
     - path: static/metrics/metrics.json
       hash: md5
-      md5: f704225514cff0f9009b50b36dcf2725
-      size: 148
+      md5: c4c8e3321fc09f271c7c59c568f49abf
+      size: 149

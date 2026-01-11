@@ -3,6 +3,7 @@ import os
 import random
 import json
 import time
+import logging
 from datetime import datetime
 import yaml
 from typing import List, Dict, Optional
@@ -12,6 +13,8 @@ from beir.datasets.data_loader import GenericDataLoader
 import torch
 import mlflow
 import mlflow.transformers
+
+from src.logging_config import setup_logging
 
 
 def build_pairs_from_qrels(
@@ -120,6 +123,13 @@ def train_bi_encoder(
     return model
 
 
+def set_seed(seed: int) -> None:
+    random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+
+
 if __name__ == "__main__":
     import argparse
 
@@ -129,6 +139,12 @@ if __name__ == "__main__":
 
     with open(args.config, "r") as f:
         cfg = yaml.safe_load(f)
+
+    setup_logging()
+    logger = logging.getLogger(__name__)
+
+    seed = int(cfg.get("random_seed", 42))
+    set_seed(seed)
 
     data_path = cfg["dataset"]["path"]
     model_name = cfg["model"]["name"]
@@ -180,13 +196,11 @@ if __name__ == "__main__":
             lr=float(cfg["train"]["lr"]),
             max_seq_length=int(cfg["train"]["max_seq_length"]),
         )
-        print(f"[train] Training: {time.time() - t0:.2f}s")
+        logger.info("[train] Training: %.2fs", time.time() - t0)
 
         from src.training.evaluate_retriever import evaluate
 
-        t1 = time.time()
         corpus_test, queries_test, qrels_test = GenericDataLoader(data_folder=data_path).load(split="test")
-        print(f"[train] Load test split: {time.time() - t1:.2f}s")
         t2 = time.time()
         metrics = evaluate(
             model_path,
@@ -198,7 +212,7 @@ if __name__ == "__main__":
             query_limit=eval_query_limit,
             faiss_threads=eval_faiss_threads,
         )
-        print(f"[train] Evaluate: {time.time() - t2:.2f}s")
+        logger.info("[train] Evaluate: %.2fs", time.time() - t2)
         safe_metrics = {k.replace("@", "_at_"): v for k, v in metrics.items()}
         mlflow.log_metrics(safe_metrics)
 
@@ -215,4 +229,4 @@ if __name__ == "__main__":
         log_artifact_if_exists(model_path, artifact_path="model")
         log_artifact_if_exists("dvc.lock")
         log_artifact_if_exists(args.config, artifact_path="config")
-        print(f"[train] Log artifacts: {time.time() - t3:.2f}s")
+        logger.info("[train] Log artifacts: %.2fs", time.time() - t3)

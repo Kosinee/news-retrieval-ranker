@@ -4,6 +4,7 @@ from datetime import datetime
 import time
 import yaml
 import os
+import logging
 import numpy as np
 from typing import Dict, List, Optional
 import faiss
@@ -11,6 +12,9 @@ from sentence_transformers import SentenceTransformer
 from beir.datasets.data_loader import GenericDataLoader
 
 from src.metrics.ir_metrics import compute_metrics
+from src.logging_config import setup_logging
+
+logger = logging.getLogger(__name__)
 
 
 def encode_texts(model_dir: str, texts: List[str], batch_size: int = 256) -> np.ndarray:
@@ -27,22 +31,14 @@ def encode_texts(model_dir: str, texts: List[str], batch_size: int = 256) -> np.
 
 def build_faiss_index(embs: np.ndarray) -> faiss.IndexFlatIP:
     index = faiss.IndexFlatIP(embs.shape[1])
-    t0 = time.time()
     faiss.normalize_L2(embs)
-    print(f"[eval] FAISS normalize_L2: {time.time() - t0:.2f}s")
-    t1 = time.time()
     index.add(embs)
-    print(f"[eval] FAISS index.add: {time.time() - t1:.2f}s")
     return index
 
 
 def faiss_search(index: faiss.IndexFlatIP, query_vecs: np.ndarray, topk: int = 100) -> List[List[int]]:
-    t0 = time.time()
     faiss.normalize_L2(query_vecs)
-    print(f"[eval] FAISS normalize queries: {time.time() - t0:.2f}s")
-    t1 = time.time()
     D, I = index.search(query_vecs, topk)
-    print(f"[eval] FAISS search index.search: {time.time() - t1:.2f}s")
     return I.tolist()
 
 
@@ -59,7 +55,6 @@ def evaluate(
     if faiss_threads is not None:
         try:
             faiss.omp_set_num_threads(faiss_threads)
-            print(f"[eval] FAISS threads: {faiss_threads}")
         except Exception:
             pass
     t0 = time.time()
@@ -70,30 +65,19 @@ def evaluate(
         (corpus[cid].get("title", "") + " " + corpus[cid].get("text", "")).strip()
         for cid in corpus_ids
     ]
-    print(f"[eval] Building corpus texts: {time.time() - t0:.2f}s")
-    t1 = time.time()
     corpus_vecs = encode_texts(model_path, corpus_texts)
-    print(f"[eval] Encoding corpus: {time.time() - t1:.2f}s")
-    t2 = time.time()
     index = build_faiss_index(corpus_vecs)
-    print(f"[eval] Building FAISS index: {time.time() - t2:.2f}s")
     id_map = {i: corpus_ids[i] for i in range(len(corpus_ids))}
     query_ids = list(queries.keys())
     if query_limit is not None and query_limit > 0:
         query_ids = query_ids[:query_limit]
         qrels = {qid: qrels[qid] for qid in query_ids if qid in qrels}
     query_texts = [queries[qid] for qid in query_ids]
-    t3 = time.time()
     query_vecs = encode_texts(model_path, query_texts)
-    print(f"[eval] Encoding queries: {time.time() - t3:.2f}s")
-    t4 = time.time()
     I = faiss_search(index, query_vecs, topk=max(k_vals))
-    print(f"[eval] FAISS search: {time.time() - t4:.2f}s")
     results = {qid: [id_map[i] for i in row if i in id_map] for qid, row in zip(query_ids, I)}
-    t5 = time.time()
     metrics = compute_metrics(qrels, results, k_vals)
-    print(f"[eval] Computing metrics: {time.time() - t5:.2f}s")
-    print(f"[eval] Total evaluate: {time.time() - t0:.2f}s")
+    logger.info("[eval] Total evaluate: %.2fs", time.time() - t0)
 
     return metrics
 
@@ -104,6 +88,8 @@ if __name__ == "__main__":
     ap.add_argument("--config", default="config/retriever.yaml", help="Path to retriever.yaml")
     ap.add_argument("--output", default=None, help="Optional metrics output path")
     args = ap.parse_args()
+
+    setup_logging()
 
     cfg = yaml.safe_load(open(args.config))
     model_path = cfg["model"]["path"]
@@ -122,4 +108,4 @@ if __name__ == "__main__":
     with open(metrics_path, "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=4, ensure_ascii=False)
 
-    print(metrics)
+    logger.info("Metrics: %s", metrics)

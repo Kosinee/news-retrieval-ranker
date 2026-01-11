@@ -4,13 +4,16 @@ import argparse
 import csv
 import json
 import os
-import time
+import logging
 from typing import Dict, Iterable, List, Tuple
 
 import numpy as np
 import yaml
 from sentence_transformers import SentenceTransformer
 
+from src.logging_config import setup_logging
+
+logger = logging.getLogger(__name__)
 
 def read_jsonl(path: str) -> Iterable[Dict[str, object]]:
     with open(path, "r", encoding="utf-8") as f:
@@ -128,6 +131,8 @@ def main() -> None:
     parser.add_argument("--qrels_split", default="test", help="Qrels split to use: train/dev/test")
     args = parser.parse_args()
 
+    setup_logging()
+
     model_path = resolve_model_path(args.config, args.model_path)
 
     corpus_path = os.path.join(args.input_path, "corpus.jsonl")
@@ -140,7 +145,6 @@ def main() -> None:
     if not os.path.exists(qrels_path):
         raise FileNotFoundError(f"Qrels file not found: {qrels_path}")
 
-    t0 = time.time()
     corpus_map = load_corpus_map(corpus_path)
     query_map = load_id_text_map(queries_path, "text")
     if not corpus_map or not query_map:
@@ -148,7 +152,6 @@ def main() -> None:
     qrels = load_qrels(qrels_path)
     if not qrels:
         raise ValueError("Qrels file is empty after parsing.")
-    print(f"[predict] Loaded corpus={len(corpus_map)} queries={len(query_map)} qrels={len(qrels)}: {time.time() - t0:.2f}s")
 
     selected = qrels[: max(args.limit, 0)]
     relevant_map: Dict[str, set[str]] = {}
@@ -173,7 +176,6 @@ def main() -> None:
     if not pair_rows:
         raise ValueError("No valid pairs found to score.")
 
-    t1 = time.time()
     model = SentenceTransformer(model_path)
     unique_qids = sorted({qid for qid, _, _ in pair_rows})
     unique_docids = sorted({doc_id for _, doc_id, _ in pair_rows})
@@ -181,7 +183,6 @@ def main() -> None:
     doc_vecs = encode_texts(model, [corpus_map[doc_id] for doc_id in unique_docids], args.batch_size)
     qid_to_idx = {qid: i for i, qid in enumerate(unique_qids)}
     docid_to_idx = {doc_id: i for i, doc_id in enumerate(unique_docids)}
-    print(f"[predict] Encoded pairs: {time.time() - t1:.2f}s")
 
     output_path = args.output_path
     output_dir = None
@@ -202,7 +203,7 @@ def main() -> None:
             d_idx = docid_to_idx[doc_id]
             score = float(np.dot(query_vecs[q_idx], doc_vecs[d_idx]))
             writer.writerow([qid, doc_id, label, score])
-    print(f"[predict] Wrote predictions to {output_path}")
+    logger.info("[predict] Wrote predictions to %s", output_path)
 
 
 if __name__ == "__main__":

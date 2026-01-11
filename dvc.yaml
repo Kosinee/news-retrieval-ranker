@@ -1,0 +1,26 @@
+stages:
+  prepare:
+    cmd: python -m src.training.prepare_data --config config/retriever.yaml
+    deps:
+      - src/training/prepare_data.py
+      - config/retriever.yaml
+      - static/data/fiqa
+    outs:
+      - static/data/fiqa_prepared
+  train:
+    cmd: python -m src.training.train_retriever --config config/retriever.yaml
+    deps:
+      - src/training/train_retriever.py
+      - config/retriever.yaml
+      - static/data/fiqa_prepared
+    outs:
+      - static/artifacts/retriever_fiqa
+  evaluate:
+    cmd: python -m src.training.evaluate_retriever --config config/retriever.yaml --output static/metrics/metrics.json
+    deps:
+      - src/training/evaluate_retriever.py
+      - config/retriever.yaml
+      - static/data/fiqa_prepared
+      - static/artifacts/retriever_fiqa
+    metrics:
+      - static/metrics/metrics.json

@@ -218,6 +218,8 @@ mlruns/
 runs/
 wandb/
 static/metrics/
+/model-store/
+torchserve/model_files/
 *.ckpt
 *.pt
 *.bin

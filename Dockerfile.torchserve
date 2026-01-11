@@ -1,0 +1,10 @@
+FROM pytorch/torchserve:latest
+
+USER root
+RUN pip install --no-cache-dir transformers==4.43.3 numpy==1.26.4
+
+USER model-server
+COPY model-store /home/model-server/model-store
+COPY torchserve/config.properties /home/model-server/config.properties
+
+CMD ["torchserve", "--start", "--ts-config", "/home/model-server/config.properties", "--model-store", "/home/model-server/model-store", "--models", "mymodel=mymodel.mar", "--ncs"]

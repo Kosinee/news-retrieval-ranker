@@ -1,0 +1,11 @@
+.git
+.venv
+__pycache__
+.pytest_cache
+mlruns
+checkpoints
+static/data
+torchserve/model_files
+*.csv
+*.pkl
+*.pt
